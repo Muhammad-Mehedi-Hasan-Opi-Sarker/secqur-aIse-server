@@ -35,7 +35,7 @@ async function run() {
             const result = await databaseCollection.findOne(query)
             res.send(result)
         })
-
+        // delete for one item 
         app.delete('/list/:id', async (req, res) => {
             const id = req.params.id;
             const query = { _id: ObjectId(id) };
